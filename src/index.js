@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
 
@@ -12,12 +12,21 @@ YTSearch({key: API_KEY, term: 'surfboard'}, function (data) {
 
 // Create a new component. This component should produce.
 // Some HTML
-const App = () => {
-    return (
-        <div>
-            <SearchBar />
-        </div>
-    )
+// 스테이트 시작할때 클래스 기반 컴포넌트가 필요하여 리펙토링 진행
+class App extends Component {
+    constructor (prop){
+        super(prop);
+
+        this.state = { vidios: [] }
+    }
+
+    render(){
+        return (
+            <div>
+                <SearchBar />
+            </div>
+        );
+    }
 }
 
 
