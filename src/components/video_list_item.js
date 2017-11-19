@@ -5,7 +5,7 @@ const VideoListItem = ({video, onVideoSelect}) => {
     const imageUrl = video.snippet.thumbnails.default.url;
 
     return(
-        <li className="list-group-item">
+        <li className="list-group-item video-group">
             <a href="#" onClick={() => onVideoSelect(video)} className="video-list media">
                 <div className="media-left">
                     <img src={imageUrl} className="media-object" alt=""/>
